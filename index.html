@@ -5,6 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Citi Challenge Pokemon</title>
+    <link rel="stylesheet" type="text/css" href="./assets/style.css" />
   </head>
   <body>
     <form>
@@ -12,6 +13,25 @@
       <input id="idInput" type="number" />
       <button id="buttonPokeNumber" type="submit">Pokemon Search</button>
     </form>
+    <br />
+    <table>
+      <tr>
+        <td>Id:</td>
+        <td id="passId"></td>
+      </tr>
+      <tr>
+        <td>Name:</td>
+        <td id="passName"></td>
+      </tr>
+      <tr>
+        <td>Type:</td>
+        <td id="passType"></td>
+      </tr>
+      <tr>
+        <td>Description:</td>
+        <td id="passDescription"></td>
+      </tr>
+    </table>
 
     <script src="./assets/api-poke.js"></script>
   </body>

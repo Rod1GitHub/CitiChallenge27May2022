@@ -1,5 +1,4 @@
 // HTML and Javascript
-
 document
   .querySelector("#buttonPokeNumber")
   .addEventListener("click", function (event) {
@@ -23,21 +22,27 @@ document
         console.log("Id = " + data.id);
         console.log("Name = " + data.name);
         console.log("Type = " + data.types[0].type.name);
+
+        document.getElementById("passId").innerHTML = data.id;
+        document.getElementById("passName").innerHTML = data.name;
+        document.getElementById("passType").innerHTML = data.types[0].type.name;
       } catch (error) {
         console.log("There was an error, please read the message displayed");
       }
     };
     fetchDataFromPokeApi1(pokeUrlPokemon);
+
     //3.2 Api Connectivity
     const fetchDataFromPokeApi2 = async (URL) => {
       try {
         const response = await fetch(URL);
         const data = await response.json();
-        console.log("Description = " + data.descriptions[5].description);
+        console.log("Description = " + data.descriptions[7].description);
+        document.getElementById("passDescription").innerHTML =
+          data.descriptions[7].description;
       } catch (error) {
         console.log("There was an error, please read the message displayed");
       }
     };
-
     fetchDataFromPokeApi2(pokeUrlCharacteristic);
   });
